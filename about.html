@@ -1,0 +1,169 @@
+<!DOCTYPE HTML>
+<!-- Website template by freewebsitetemplates.com; modified further by me -->
+<!-- email suggestions for improvement to openstory@outlook.com -->
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title> About - OpenStory - The first mass collaborative, creative writing project</title>
+	
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+	
+	
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3/jquery.min.js"></script>
+	
+</head>
+
+<body>
+	<div id="header">
+		<div>
+			<div class="logo">
+				<a href="index.html">OpenStory</a>
+			</div>
+			<ul id="navigation">
+				<li>
+					<a href="index.html">Write</a>
+				</li>
+				<li>
+					<a href="features.html">Features</a>
+				</li>
+				<li>
+					<a href="news.html">News</a>
+				</li>
+				<li class="active">
+					<a href="about.html">About</a>
+				</li>
+				<li>
+					<a href="contact.html">Contact</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div id="contents">
+		<div id="about">
+			
+			<h1 align="center" >About Open Story</h1>
+			
+				<h2 align="center" >The wisdom of crowds</h2>
+				
+				<img src="images/crowd.png" height="150" width="200" align="right">
+				
+				<p>
+					
+				This is the principle that a large group of inexperienced people can outperform an individual expert. A classic example of this took place in 1906, Plymouth, England. A group of 800 people competed to
+				guess the weight of a slaughtered ox. The median guess, 1207lbs, was within 1% accuracy of the actual weight(1198lbs.)
+				
+				This process is consistently more accurate than an expert individual performing the task alone. It is our goal to harness this principle to improve
+				the efficiency of producing high quality art or even designing systems.
+				
+				For this to work, several factors must be controlled. Firstly, an individuals contribution must be independent; it mustn't be exposed to biases from other people.
+				This characteristic is also critical to making the project scale effectively.
+				Secondly, interpretations must be diverse, as they need to provide robustness to the discovery process.
+				Finally, there must be a way aggregating these inputs into a collective output. This is the challenging aspect and this is what we are trying to discover.
+		
+				</p>
+			
+			<p>
+				
+				
+			
+				As a simpler demonstration than the main project, below is an animation containing a number of circles which, to prevent somebody from cheating by counting them, will move around (the number of circles is constant on each redraw.) 
+				Enter a guess as to how many circles you think are in this animation: 
+				
+				<form name = 'coinjar'action="" method="post" >
+					
+					<input type="number" id="jarsweets">
+					
+					<input type="hidden" id="honeypot" >
+					
+					<input type="button" value="Guess" onclick="sendGuess()">
+					
+				</form>
+									
+			</p>
+			
+			<!-- display improved example as a canvas animation -->	
+			
+			<canvas id="example" width="400" height="400"
+				style="border:1px solid #000000";>
+		
+					Your browser does not support this website, please use a browser which has HTML5 support.
+		
+			</canvas>
+			
+			<script type ="text/javascript" src = "coinjar.js"> </script>
+		
+			
+			<!-- insert image of coins; image replaced with animation, might be re-added later -->	
+			
+			<!--<img src="images/coinjar.jpg" height="250" width="200"> (contains 276 coins)-->
+						
+			<!-- add a data manipulation tool --> 
+			
+			<div id = "result" class= "hidden">
+				<p>
+					By manipulating everybody's guesses, it is possible to count the number of circles in this animation.
+					The mean should already give a fairly accurate result. But if you filter out anomalies (namely, attempts at sabotage), we can achieve an even
+					greater level of accuracy.					
+				</p>	
+			
+				 <form>
+  					Percentage of data to use (around the median):
+  					
+  					<input id="slider" type="range" name="points" min="0" max="100" step="10" value="70" onmouseup="updateResult(this.value)">
+  					
+  					<br/> 
+  					
+  					Average guess:
+  					
+  					<output>  						
+  						
+  						
+  					</output>
+  					 
+  					<br/> 
+  					Answer: 53 Circles.
+				</form>
+			</div>
+			
+			<h2 align="center" >What is OpenStory?</h2>
+			<p>
+				Open Story is a mass collaborative creative writing project. Users are presented a notepad containing the current product and are challenged to modify it how they please to make it better.
+				This new data is then routinely merged together to form another new product. The process is then repeated as many times as necessary or indefinitely. 
+				To motivate user to contribute and to reduce the amount of sabotage, clients are rewarded with credits for good contributions and lose credits for bad contributions. Since the system is partially based on a majority vote, the expected value for a contribution is positive; as long as you aren't deliberately sabotaging the system, you will gain more credits than you lose. These credits will eventually be used to buy products in the store in the future.
+			</p>
+			
+			<h2 align="center" >How can I help?</h2>
+			<p>
+				Contributing to the project is easy. Just enter text on the home page of the website, change whatever you want (everything counts!) <br />
+				Don't worry if you aren't the best writer. Everybody can definitely contribute something useful.<br />
+				The changes you make will only be visible to you for a while; once per hour everybody's contributions are fused together to make a new story.
+			</p>
+			
+			<h2 align="center" >What's in it for me?</h2>
+			<p>
+				At this stage I can't offer anything for your service other than the satisfaction of being part of an exciting social and computational experiment.
+				I anticipate this changing in the future.
+				Of course you aren't expected to work for free; Eventually I intend to pay users for positive contributions (to avoid spam). Payments will be paid through Paypal or potentially cryptocurrencies. The metrics use to calculate a clients share of the profits will be public knowledge (to establish trust.)
+				Any contributions made prior to this change are recorded and will be factored into rewards.
+				In addition to any personal reward, this project boasts several potential societal benefits. A project like this could some day cause an explosion in technological development if it helps to resolve 
+				the problem of scalability in collaboration. Additionally, it could ensure a fairer distribution of wealth, by breaking down a persons' reasoning and therefore eliminating the requirement of total cohesiveness of all insights.
+			</p>		
+			
+			
+		</div>
+	</div>
+	<div id="footer">
+		<div class="clearfix">
+			<div id="connect">
+				<a href="https://www.facebook.com/0penstory?ref=aymt_homepage_panel" target="_blank" class="facebook"> </a>
+				<a href="https://plus.google.com/u/0/101750560186648815429/posts" target="_blank" class="googleplus"> </a>
+				<a href="https://twitter.com/storyopen" target=" blank" class="twitter"> </a>
+				<a href="https://www.linkedin.com/groups/OpenStory-8222818?home=&gid=8222818" target="_blank" class="linkedin"> </a>
+			</div>
+			<p>
+				© 2014 Mass Collaboration Technologies. All Rights Reserved.
+			</p>
+		</div>
+	</div>
+</body>
+</html>
